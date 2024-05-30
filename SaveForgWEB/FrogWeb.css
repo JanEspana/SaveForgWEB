@@ -1,0 +1,156 @@
+body{
+    margin-top: -1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/01/53/wood-1866661_640.jpg);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.scroll-container {
+    background-color: rgb(125, 182, 92);
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    width: 80%;
+}
+.scroll-container img {
+    padding: 10px;
+}
+h1
+{
+    -webkit-text-stroke: 1px black;
+}
+.ranking{
+    color: white;
+    padding: 10px;
+    padding-right: 10%;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+button {
+    background-color: rgb(125, 182, 92);
+    color: white;
+    padding: 10px;
+    margin: 2%;
+    border-radius: 10px;
+    border-color: rgb(35, 66, 35);
+}
+.RankingTable {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    padding-right: 10%;
+    background-color: rgb(99, 169, 73);
+    color: white;
+    /* border solid */
+    border: solid 1px rgb(35, 66, 35);
+    border-radius: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.RankingTable tr, th, td {
+    width: 100%;
+}
+
+.OrderDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-right: 1%;
+    margin-left: -1%;
+    margin-right: -1%;
+    color: white;
+    width: auto;
+}
+.SeparatorDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    /* ponlos en columna */
+    flex-direction: column;
+    width: 75%;
+}
+.ImageDescDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 1%;
+    background-color: rgb(87, 143, 67);
+    color: white;
+    border-radius: 10px;
+    /* ponlos en columna */
+    flex-direction: column;
+    width: 90%;
+}
+.leftDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    /* ponlos en columna */
+    flex-direction: column;
+    width: 75%;
+}
+
+.tabla {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: -5%;
+    background-color: rgb(125, 182, 92);
+    border: #6B4925 solid 1px;
+    color: white;
+    width: 92%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(125, 182, 92);
+    border: #6B4925 solid 1px;
+    color: white;
+    width: 92%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+tr {
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(125, 182, 92);
+    color: white;
+    width: 92%;
+    border-color: #6B4925;
+}
+.frogImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.logoImg {
+    width: 150px;
+    height: 100px;
+    margin-top: -70%;
+    margin-left: -60%;
+}
+form
+{
+    color: white;
+}

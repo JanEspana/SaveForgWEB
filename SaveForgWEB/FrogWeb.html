@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="FrogWeb.css">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <div id="app">
+        <div class="OrderDiv" >
+            <div class="leftDiv">
+                <img src="https://i.ibb.co/kX5L8cH/tts-logo-provisional.png" alt="tts-logo-provisional" border="0" class="logoImg">
+                <h1>Rankings</h1>
+            <br>
+            <div class="ranking">
+                <button v-on:click="ChangeRanking('Tree')">Rana de árbol</button>
+                <button v-on:click="ChangeRanking('Rain')">Rana de lluvia</button>
+                <button v-on:click="ChangeRanking('King')">Rey rana</button>
+                <!-- Crea una lista que por cada nombre en resultArray muestre el tiempo y un numero -->
+                <!-- si Ranking character es tree  -->
+                <table v-if="RankingArray!=null" class="RankingTable">
+                    <tr class="headers">
+                        <th>Nombre</th>
+                        <th>Tiempo</th>
+                        <th>Numero de moscas</th>
+                    </tr>
+                    <tr v-for="name in RankingArray" class="tabla">
+                        <td>{{name.username}}</td>
+                        <td>{{name.time}}</td>
+                        <td>{{name.numFlies}}</td>
+                    </tr>
+                </table>
+                <p v-else> No hay datos de este personaje </p>
+            </div>
+            </div>
+            <div class="SeparatorDiv">
+                <img src="https://i.ibb.co/hB96jc6/projectlogo.png" alt="gameLogo" class="frogImg">
+                <div  class="ImageDescDiv">
+                    <div class="scroll-container">
+                        <img src="https://media.istockphoto.com/id/1049028724/es/foto/sonrisa-de-ojos-rojos-rana-de-%C3%A1rbol.jpg?s=612x612&w=0&k=20&c=uaRwVtILDp8iyWn7OL2z7qnChtEzUggIhgJYv4noPbI=" alt="Rana">
+                        <img src="https://media.istockphoto.com/id/1049028724/es/foto/sonrisa-de-ojos-rojos-rana-de-%C3%A1rbol.jpg?s=612x612&w=0&k=20&c=uaRwVtILDp8iyWn7OL2z7qnChtEzUggIhgJYv4noPbI=" alt="Rana">
+                        <img src="https://media.istockphoto.com/id/1049028724/es/foto/sonrisa-de-ojos-rojos-rana-de-%C3%A1rbol.jpg?s=612x612&w=0&k=20&c=uaRwVtILDp8iyWn7OL2z7qnChtEzUggIhgJYv4noPbI=" alt="Rana">
+                        <img src="https://media.istockphoto.com/id/1049028724/es/foto/sonrisa-de-ojos-rojos-rana-de-%C3%A1rbol.jpg?s=612x612&w=0&k=20&c=uaRwVtILDp8iyWn7OL2z7qnChtEzUggIhgJYv4noPbI=" alt="Rana">
+                    </div>
+                    <div class="descriptionContainer">
+                        <p>Descripción del juego</p>
+                        <p class="description">En este juego de plataformas encarnas a una rana que debe de escapar de un incendio en su hogar.</p>
+                        <p class="description">Escala el árbol antes de que se acabe el tiempo, comiendo moscas y evitando todo tipo de obstáculos para salvarte.</p>
+                    </div>
+                    <div class="login" v-if="!logedIn">
+                        <p>Inicia sesión para ver tus puntuaciones</p>
+                        <!-- crea dos textos para escribir en los que se aplique un regex y un botón para submit -->
+                        <input type="text" v-model="username" placeholder="Nombre de usuario">
+                        <input type="password" v-model="password" placeholder="Contraseña">
+                        <button v-on:click="Login">Iniciar sesión</button>
+                    </div>
+                    <div class="login" v-else>
+                        <table v-if="RankingArray!=null" class="RankingTable">
+                            <tr class="headers">
+                                <th>Personaje</th>
+                                <th>Tiempo</th>
+                                <th>Numero de moscas</th>
+                            </tr>
+                            <tr v-for="name in UserArray" class="tabla">
+                                <td>{{name.character}}</td>
+                                <td>{{name.time}}</td>
+                                <td>{{name.flies}}</td>
+                        </table>
+                        <button v-on:click="logOut">Cerrar sesión</button>
+                    </div>
+                    <!-- <div class="register">
+                        <p>¿No tienes una cuenta todavía? Regístrate aquí.</p>
+                        <input type="text" id="usernameRegister" placeholder="Nombre de usuario">
+                        <input type="password" id="passwordRegister" placeholder="Contraseña">
+                        <button v-on:click="Register">Registrarse</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="FrogRanking.js"></script>
+    
+    <script>
+        const appMounted = app.mount('#app');
+    </script>
+</body>
+
+</html>
